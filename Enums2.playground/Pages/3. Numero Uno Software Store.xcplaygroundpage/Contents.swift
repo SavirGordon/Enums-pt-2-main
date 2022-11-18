@@ -118,20 +118,22 @@ func sendOrderConfirmation(of productType: ProductType, in edition: Edition, by 
 /*:
  e. Now let’s see the store in action! Start by calling the displayProductOfferings() method.
  */
-displayProductOfferings()
+var prod = ProductType.dealForcer
+print(displayProductOfferings())
 
 
 /*:
 g. Create a variable instance of the Edition enumeration. Name the variable myEdition and set it to the basic case. Then call the upgrade method on that instance.
  */
-var myEdition = Edition.basic
-myEdition.upgrade()
-
+var eddy = Edition.basic
+ 
+eddy.upgrade()
+sendOrderConfirmation(of: .aceRepository, in: eddy, by: .shipping(weight: 5))
 
 
 /*:
  h. Finally let’s call the sendOrderConfirmation with the following argument values: of: ProductType.aceRepository, in: myEdition, and by: DeliveryMethod.shipping(weight: 1)
  */
 
-sendOrderConfirmation(of: <#T##ProductType#>, in: <#T##Edition#>, by: <#T##DeliveryMethod#>)
+
 
